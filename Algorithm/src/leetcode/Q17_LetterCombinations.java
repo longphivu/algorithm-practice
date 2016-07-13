@@ -5,17 +5,33 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Author: 		Long Vu, longvu.cs@outlook.com
+ * Date: 		Jul 13, 2016
+ * Problem: 	Q17_LetterCombinations.java
+ * Source:		https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+ *
+ * Description:	Given a digit string, return all possible letter combinations that the number could represent. 
+ * A mapping of digit to letters (just like on the telephone buttons) is given below.
+ * 
+ * Input:Digit string "23"
+ * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+ *
+ * Solution:	1. Dynamic Programming: iterate through the digits, each time we get a new set of characters
+ * 				add it to each of the previous solution.
+ * 				2. Apply depth first search
+ * Complexity:	O(n*m)
+ * Notes:		
+ *					
+ * Follow up:	(M) Generate Parentheses   (M) Combination Sum  
+ */
 public class Q17_LetterCombinations {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		letterCombinations("23");
 	}
 
-	public List<String> letterCombinations(String digits) {
+	public static List<String> letterCombinations(String digits) {
 	        Map<Character, String> map = new HashMap<Character, String>();
 	        populateLetter(map);
 	        
@@ -39,7 +55,7 @@ public class Q17_LetterCombinations {
 	        return solution;
 	    }
 	
-	public List<String> letterCombinations2(String digits) {
+	public static List<String> letterCombinations2(String digits) {
         char[][] charMap = new char[][]{{},{},{'a','b','c'},{'d','e','f'},{'g','h','i'},{'j','k','l'},{'m','n','o'},{'p','q','r','s'},{'t','u','v'},{'w','x','y','z'}};
         
         List<String> solution = new ArrayList<String>();
@@ -50,7 +66,7 @@ public class Q17_LetterCombinations {
         return solution;
     }
     
-    void dfs(String digits, int level, StringBuilder sb, List<String> solutions, char[][] map){
+	static void dfs(String digits, int level, StringBuilder sb, List<String> solutions, char[][] map){
         if(level >= digits.length()){
             solutions.add(sb.toString());
             return;
