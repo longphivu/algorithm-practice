@@ -2,6 +2,20 @@ package leetcode;
 
 import universal.Node;
 
+/**
+ * Author: 		Long Vu, longvu.cs@outlook.com
+ * Date: 		Jul 14, 2016
+ * Problem: 	Q19_RemoveNthNode.java
+ * Source:		
+ *
+ * Description:	
+ *
+ * Solution:		
+ * Complexity:
+ * Notes:
+ *					
+ * Follow up:			
+ */
 public class Q19_RemoveNthNode {
 	public Node removeNthFromEnd(Node head, int n) {
 		return recursive(head, n) == n ? head.next : head;
