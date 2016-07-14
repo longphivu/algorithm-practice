@@ -24,7 +24,7 @@ import java.util.List;
  *	
  * Solution:	typical kSum 	
  * Complexity:	Time O(n^3)
- * Notes:		+
+ * Notes:		
  *					
  * Follow up:	(M) Minimum Path Sum   (M) Combination Sum III   (E) Shortest Word Distance  
  */
