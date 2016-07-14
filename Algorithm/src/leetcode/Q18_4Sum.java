@@ -26,7 +26,7 @@ import java.util.List;
  * Complexity:	Time O(n^3)
  * Notes:		+
  *					
- * Follow up:			
+ * Follow up:	(M) Minimum Path Sum   (M) Combination Sum III   (E) Shortest Word Distance  
  */
 public class Q18_4Sum {
 	public List<List<Integer>> fourSum(int[] nums, int target) {
