@@ -17,8 +17,6 @@ package leetcode;
  * convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR". 
  * 
  * Solution:	1. Straight forward: use 1 pointer to move back and fort between the lines.
- * 				2. Other: iterate through input string m (inputed rows) times, we can calculate next char by using this
- * 				formular: next = curr + (nextPeak-curr)*2
  * 						
  * Complexity:	O(n)
  * Notes:
@@ -72,7 +70,11 @@ public class Q6_ZigzagConversion {
 				result = result.append(array[j]);
 				if (i != 0 && i != nRows - 1) {
 					temp = (j % period);
-					index = ((temp < nRows) ? (nRows - 1 - temp) << 1 : (period - temp) << 1);
+					if(temp < nRows){
+						index = (nRows - 1 - j) << 1;
+					} else {
+						index = (period - temp) << 1;
+					}
 					j += index;
 				} else {
 					j += period;
@@ -83,39 +85,7 @@ public class Q6_ZigzagConversion {
 		return result.toString();
 	}
 	
-	public static String convert3(String s, int nRows) {
-		if (nRows <= 1)
-			return s;
-		
-		int len = s.length();
-		int nums = (len - 1)/nRows + 3;//ceil the result of len/rows
-		char[] array = s.toCharArray();
-		StringBuilder result = new StringBuilder();
-		
-		int[] peaks = new int[nums];
-		for(int i = 0; i < nums; i++){
-			peaks[i] = nRows*i-i;
-		}
-		
-		for(int k = 0; k < nRows; k++){
-			int j = k;
-			int i = 1;
-			while(j < len && i < nums){
-				result.append(array[j]);
-				if(peaks[i] - j > 0)
-					j = j + (peaks[i]-j)*2;
-				else {
-					j = j + (peaks[i+1]-j)*2;
-				}
-				i++;
-			}
-		}
-		
-		return result.toString();
-	}
-	
 	public static void main(String[] agr){
-		System.out.println(convert2("abcdefghi",5));
-		System.out.println(convert3("abcdefghi",5));
+		System.out.println(convert2("abcdefghi",4));
 	}
 }
