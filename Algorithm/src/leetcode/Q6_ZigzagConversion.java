@@ -64,18 +64,14 @@ public class Q6_ZigzagConversion {
 		StringBuilder result = new StringBuilder();
 		for (int i = 0; i < nRows; i++) {
 			int j = i;
-			int index = 0, temp = 0;
+			int move = 0, temp = 0;
 
 			while (j < array.length) {
 				result = result.append(array[j]);
 				if (i != 0 && i != nRows - 1) {
 					temp = (j % period);
-					if(temp < nRows){
-						index = (nRows - 1 - temp) << 1;
-					} else {
-						index = (period - temp) << 1;
-					}
-					j += index;
+					move = (temp < nRows) ? (nRows - 1 - temp) << 1 : (period - temp) << 1;
+					j += move;
 				} else {
 					j += period;
 				}
@@ -86,6 +82,6 @@ public class Q6_ZigzagConversion {
 	}
 	
 	public static void main(String[] agr){
-		System.out.println(convert2("abcdefghi",4));
+		System.out.println(convert2("abcdefghi",2));
 	}
 }
