@@ -71,7 +71,7 @@ public class Q6_ZigzagConversion {
 				if (i != 0 && i != nRows - 1) {
 					temp = (j % period);
 					if(temp < nRows){
-						index = (nRows - 1 - j) << 1;
+						index = (nRows - 1 - temp) << 1;
 					} else {
 						index = (period - temp) << 1;
 					}
