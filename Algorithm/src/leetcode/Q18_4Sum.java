@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 13, 2016
- * Problem: 	Q18_4Sum.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 13, 2016
+ * Problem:		Q18_4Sum.java
  * Source:		
  *
  * Description:	
@@ -22,7 +22,7 @@ import java.util.List;
 	  [-2,  0, 0, 2]
 	]
  *	
- * Solution:	typical kSum 	
+ * Solution:	typical kSum	
  * Complexity:	Time O(n^3)
  * Notes:		
  *					

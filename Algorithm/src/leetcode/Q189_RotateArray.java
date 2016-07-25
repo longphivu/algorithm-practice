@@ -1,16 +1,16 @@
 package leetcode;
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 21, 2016
- * Problem: 	Q189_RotateArray.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 21, 2016
+ * Problem:		Q189_RotateArray.java
  * Source:		https://leetcode.com/problems/rotate-array/
  *
  * Description:	Rotate an array of n elements to the right by k steps.
 				For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4]. 
  *
  * Solution:	1. Array copy, O(n) space
- * 				2. Shift element, O(1) space
- * 				3. Reverse, best ?
+ *				2. Shift element, O(1) space
+ *				3. Reverse, best ?
  * Complexity:	O(n) or O(n*k)
  * Notes:
  *					

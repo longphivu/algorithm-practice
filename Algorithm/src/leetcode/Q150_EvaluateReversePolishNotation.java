@@ -3,16 +3,16 @@ package leetcode;
 import java.util.Stack;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 21, 2016
- * Problem: 	Q150_EvaluateReversePolishNotation.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 21, 2016
+ * Problem:		Q150_EvaluateReversePolishNotation.java
  * Source:		https://leetcode.com/problems/evaluate-reverse-polish-notation/
  *
  * Description:	Evaluate the value of an arithmetic expression in Reverse Polish Notation. 
 				Valid operators are +, -, *, /. Each operand may be an integer or another expression. 
 				Some examples:
-  				["2", "1", "+", "3", "*"] -> ((2 + 1) * 3) -> 9
-  				["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
+ 				["2", "1", "+", "3", "*"] -> ((2 + 1) * 3) -> 9
+ 				["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
  *
  * Solution:	Use stack to store the operands, pop two top element and evaluate each time getting an expression
  * Complexity:	O(n)
@@ -22,6 +22,7 @@ import java.util.Stack;
  */
 public class Q150_EvaluateReversePolishNotation {
 	 public int evalRPN(String[] tokens) {
+			int returnValue = 0;
 	        String exps = "+-/*";
 	        Stack<Integer> stack = new Stack<Integer>();
 	        for(String token : tokens){
@@ -40,6 +41,7 @@ public class Q150_EvaluateReversePolishNotation {
 	                stack.push(Integer.valueOf(token));
 	            }
 	        }
-	        return stack.pop();
+	        returnValue = stack.pop();
+	        return returnValue;
 	    }
 }

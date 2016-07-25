@@ -1,9 +1,9 @@
 package leetcode;
 
 /**
- * Author: 		
- * Date: 		Jul 19, 2016
- * Problem: 	Q4_MedianTwoSortedArray.java
+ * Author:		
+ * Date:		Jul 19, 2016
+ * Problem:		Q4_MedianTwoSortedArray.java
  * Source:		https://leetcode.com/problems/median-of-two-sorted-arrays/
  *
  * Description:	
@@ -20,9 +20,9 @@ package leetcode;
  * The median is (2 + 3)/2 = 2.5
  * 
  * Solution:	- X Wang: This problem can be converted to the problem of finding kth element, k is (A's length + B' Length)/2.
- * 				If any of the two arrays is empty, then the kth element is the non-empty array's kth element. 
- * 				If k == 0, the kth element is the first element of A or B. 
- * 				For normal cases(all other cases), we need to move the pointer at the pace of half of an array length to get log(n) time. 
+ *				If any of the two arrays is empty, then the kth element is the non-empty array's kth element. 
+ *				If k == 0, the kth element is the first element of A or B. 
+ *				For normal cases(all other cases), we need to move the pointer at the pace of half of an array length to get log(n) time. 
  * Complexity:	O(logn)
  * Notes:
  *					

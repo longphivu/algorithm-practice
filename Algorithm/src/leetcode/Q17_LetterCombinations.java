@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 13, 2016
- * Problem: 	Q17_LetterCombinations.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 13, 2016
+ * Problem:		Q17_LetterCombinations.java
  * Source:		https://leetcode.com/problems/letter-combinations-of-a-phone-number/
  *
  * Description:	Given a digit string, return all possible letter combinations that the number could represent. 
@@ -18,8 +18,8 @@ import java.util.Map;
  * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
  *
  * Solution:	1. Dynamic Programming: iterate through the digits, each time we get a new set of characters
- * 				add it to each of the previous solution.
- * 				2. Apply depth first search
+ *				add it to each of the previous solution.
+ *				2. Apply depth first search
  * Complexity:	O(n*m)
  * Notes:		
  *					

@@ -1,9 +1,9 @@
 package leetcode;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 15, 2016
- * Problem: 	Q6_ZigzagConversion.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 15, 2016
+ * Problem:		Q6_ZigzagConversion.java
  * Source:		https://leetcode.com/problems/zigzag-conversion/
  *
  * Description:	
@@ -17,7 +17,7 @@ package leetcode;
  * convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR". 
  * 
  * Solution:	1. Straight forward: use 1 pointer to move back and fort between the lines.
- * 						
+ *						
  * Complexity:	O(n)
  * Notes:
  *					

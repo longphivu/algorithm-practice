@@ -5,9 +5,9 @@ import java.util.Map;
 
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 13, 2016
- * Problem: 	Two Sum
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 13, 2016
+ * Problem:		Two Sum
  * Source:		https://leetcode.com/problems/two-sum/
  * 
  * Description:

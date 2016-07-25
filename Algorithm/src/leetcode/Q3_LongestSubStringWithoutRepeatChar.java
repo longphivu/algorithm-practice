@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 13, 2016
- * Problem: 	Longest Substring Without Repeating Characters
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 13, 2016
+ * Problem:		Longest Substring Without Repeating Characters
  * Source:		https://leetcode.com/problems/longest-substring-without-repeating-characters/
  *
  * Description:	
@@ -17,7 +17,7 @@ import java.util.Map;
  * Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  *
  * Solution:	use extra storage to store the location of characters, if meet again and its previous location is between current start index
- * 				and current index then start a new string/start index, and calculate the max
+ *				and current index then start a new string/start index, and calculate the max
  * Complexity:	O(n) Time, O(n) Space
  * Notes:		make sure to check the charset or we can use Java Hash Map implement
  *					

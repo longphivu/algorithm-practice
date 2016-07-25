@@ -8,9 +8,9 @@ Output: 7 -> 0 -> 8
 import universal.ListNode;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 13, 2016
- * Problem: 	Q2_AddTwoNumber.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 13, 2016
+ * Problem:		Q2_AddTwoNumber.java
  * Source:		https://leetcode.com/problems/add-two-numbers/
  * 
  * Description:

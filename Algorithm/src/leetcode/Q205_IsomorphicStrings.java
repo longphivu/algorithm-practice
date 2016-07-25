@@ -1,9 +1,9 @@
 package leetcode;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 22, 2016
- * Problem: 	Q205_IsomorphicStrings.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 22, 2016
+ * Problem:		Q205_IsomorphicStrings.java
  * Source:		https://leetcode.com/problems/isomorphic-strings/
  *
  * Description:	Given two strings s and t, determine if they are isomorphic.
@@ -16,7 +16,7 @@ package leetcode;
 				Given "paper", "title", return true.
  *
  * Solution:	using 2 maps: first map to map the character from first string to second string; second map to check if the character 
- * 				from second string has been map or not.	
+ *				from second string has been map or not.	
  * Complexity:	O(n)
  * Notes:
  *					

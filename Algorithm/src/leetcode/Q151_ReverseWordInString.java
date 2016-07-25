@@ -1,9 +1,9 @@
 package leetcode;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 21, 2016
- * Problem: 	Q151_ReverseWordInString.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 21, 2016
+ * Problem:		Q151_ReverseWordInString.java
  * Source:		https://leetcode.com/problems/reverse-words-in-a-string/
  *
  * Description:	Given an input string, reverse the string word by word. 

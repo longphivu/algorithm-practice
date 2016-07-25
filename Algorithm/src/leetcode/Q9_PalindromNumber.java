@@ -1,9 +1,9 @@
 package leetcode;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 20, 2016
- * Problem: 	Q9_PalindromNumber.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 20, 2016
+ * Problem:		Q9_PalindromNumber.java
  * Source:		https://leetcode.com/problems/palindrome-number/
  *
  * Description:	Determine whether an integer is a palindrome. Do this without extra space.

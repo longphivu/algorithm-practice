@@ -24,7 +24,7 @@ public class Q20_ValidParentheses {
         closingP['('] = ')';
         closingP['{'] = '}';
         closingP['['] = ']';
-        		
+       		
         Stack<Character> stack = new Stack<Character>();
         for(int i = 0; i<s.length(); i++){
             char c = s.charAt(i);

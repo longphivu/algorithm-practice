@@ -3,9 +3,9 @@ package leetcode;
 import universal.Node;
 
 /**
- * Author: 		Long Vu, longvu.cs@outlook.com
- * Date: 		Jul 14, 2016
- * Problem: 	Q19_RemoveNthNode.java
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 14, 2016
+ * Problem:		Q19_RemoveNthNode.java
  * Source:		
  *
  * Description:	

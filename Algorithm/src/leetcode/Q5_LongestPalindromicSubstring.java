@@ -1,9 +1,9 @@
 package leetcode;
 
 /**
- * Author: 		
- * Date: 		Jul 13, 2016
- * Problem: 	Q5_LongestPalindromicSubstring.java
+ * Author:		
+ * Date:		Jul 13, 2016
+ * Problem:		Q5_LongestPalindromicSubstring.java
  * Source:		https://leetcode.com/problems/longest-palindromic-substring/
  *
  * Description:	
@@ -11,13 +11,13 @@ package leetcode;
  * and there exists one unique longest palindromic substring.
  * 
  * Solution:	http://www.programcreek.com/2013/12/leetcode-solution-of-longest-palindromic-substring-java/
- * 				Dynamic Programming: using two dimension table to store the solution of inner string and use it to calculate the next/boundary string
- * 				Other solution: iterate through each of character of the string to find the maximum palindrome at each char
- * 				
- * Complexity: 	Time O(n^2), Space O(n^2) or O(1)
+ *				Dynamic Programming: using two dimension table to store the solution of inner string and use it to calculate the next/boundary string
+ *				Other solution: iterate through each of character of the string to find the maximum palindrome at each char
+ *				
+ * Complexity:	Time O(n^2), Space O(n^2) or O(1)
  * Notes:		For research purpose: Manacher's Algorithm - O(n) Time
  *					
- * Follow up:	(H) Shortest Palindrome   (E) Palindrome Permutation   (H) Palindrome Pairs  		
+ * Follow up:	(H) Shortest Palindrome   (E) Palindrome Permutation   (H) Palindrome Pairs 		
  */
 public class Q5_LongestPalindromicSubstring {
 
