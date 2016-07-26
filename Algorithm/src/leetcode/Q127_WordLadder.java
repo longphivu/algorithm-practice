@@ -6,14 +6,38 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
+
+/**
+ * Author:      Long Vu, longvu.cs@outlook.com
+ * Date:		Jul 25, 2016
+ * Problem:		Q127_WordLadder.java
+ * Source:		https://leetcode.com/problems/word-ladder/
+ *
+ * Description:	Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 
+				1.Only one letter can be changed at a time
+				2.Each intermediate word must exist in the word list
+				For example, 
+				Given:
+				beginWord = "hit"
+				endWord = "cog"
+				wordList = ["hot","dot","dog","lot","log"]
+				As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+				return its length 5. 
+ *
+ * Solution:	BFS ensure to get the optimize solution
+ * Complexity:	O(n*m*26)
+ * Notes:		Two-end BFS https://discuss.leetcode.com/topic/29303/two-end-bfs-in-java-31ms/2
+ *				
+ * Follow up:	(M) Combination Sum   (M) Linked List Cycle II   (H) Rearrange String k Distance Apart
+ */
 public class Q127_WordLadder {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String begin = "hit";
-		String end = "cog";
+		String begin = "hot";
+		String end = "dog";
 		Set<String> set = new HashSet<String>();
-		set.addAll(Arrays.asList("hot","dot","dog","lot","log"));
+		set.addAll(Arrays.asList("hot", "dog", "dot"));
 		System.out.println(ladderLength(begin, end, set));
 	}
 
@@ -25,33 +49,31 @@ public class Q127_WordLadder {
 		queue.add(beginWord);
 
 		int steps = 1;
-		Set<String> visited = new HashSet<String>();
 		while (!queue.isEmpty()) {
 			int size = queue.size();
 			while (size-- > 0) {
 				beginWord = queue.poll();
-				for (String word : wordList) {
-					if (charDiff(beginWord, endWord) <= 1) {
-						return steps+1;
-					} else if (charDiff(beginWord, word) == 1 && !visited.contains(word)) {
-						queue.add(word);
-						visited.add(word);
+				char[] chrs = beginWord.toCharArray();
+				for (int i = 0; i < chrs.length; i++) {
+					char temp = chrs[i];
+					for (char c = 'a'; c <= 'z'; c++) {
+						chrs[i] = c;
+
+						String newWord = new String(chrs);
+						if (newWord.equals(endWord))
+							return steps + 1;
+						if (wordList.contains(newWord)) {
+							queue.add(newWord);
+							wordList.remove(newWord);
+						}
 					}
+					chrs[i] = temp;
 				}
-				steps++;
 			}
+			steps++;
 		}
 
 		return 0;
 	}
-	
-	public static int charDiff(String s1, String s2){
-        if(s1.length() != s2.length()) return 2;
-        int cnt = 0;
-        for(int i = 0; i < s1.length(); i++){
-            if(s1.charAt(i) != s2.charAt(i))
-                cnt++;
-        }
-        return cnt;
-    }
+
 }
