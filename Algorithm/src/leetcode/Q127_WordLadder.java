@@ -26,18 +26,17 @@ import java.util.Set;
  *
  * Solution:	BFS ensure to get the optimize solution
  * Complexity:	O(n*m*26)
- * Notes:		Two-end BFS https://discuss.leetcode.com/topic/29303/two-end-bfs-in-java-31ms/2
+ * Notes:		Two-end BFS https://discuss.leetcode.com/topic/29303/two-end-bfs-in-java-31ms
  *				
  * Follow up:	(M) Combination Sum   (M) Linked List Cycle II   (H) Rearrange String k Distance Apart
  */
 public class Q127_WordLadder {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String begin = "hot";
-		String end = "dog";
+		String begin = "htt";
+		String end = "cog";
 		Set<String> set = new HashSet<String>();
-		set.addAll(Arrays.asList("hot", "dog", "dot"));
+		set.addAll(Arrays.asList("hot","dot","dog","lot","log"));
 		System.out.println(ladderLength(begin, end, set));
 	}
 
