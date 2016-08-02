@@ -2,6 +2,7 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -33,7 +34,7 @@ import java.util.Set;
  * Solution:	Same as Q127 Word Ladder, but add a class to keep track of previous word
  * Complexity:	O(n*m*26)
  * Notes:		- one word can be use in multiple solutions
- * 				- https://discuss.leetcode.com/topic/28774/my-30ms-bidirectional-bfs-and-dfs-based-java-solution/2
+ * 				- https://discuss.leetcode.com/topic/28774/my-30ms-bidirectional-bfs-and-dfs-based-java-solution
  *				
  * Follow up:	(M) Palindrome Partitioning   (M) Add and Search Word - Data structure design   (E) Flip Game  
  */
@@ -69,12 +70,13 @@ public class Q126_WordLadderII {
 						String newWord = new String(chars);
 						if (newWord.equals(endWord)) {
 							ArrayList<String> sol = new ArrayList<String>();
-							sol.add(0, endWord);
+							sol.add(endWord);
 							WordNode preNode = wnode;
 							while (preNode != null) {
-								sol.add(0, preNode.val);
+								sol.add(preNode.val);
 								preNode = preNode.pre;
 							}
+							Collections.reverse(sol);
 							solutions.add(sol);
 							hasSolution = true;
 						} else if (wordList.contains(newWord)) {
