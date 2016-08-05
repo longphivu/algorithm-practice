@@ -25,34 +25,31 @@ package leetcode;
  */
 public class Q006_ZigzagConversion {
 	public String convert(String s, int nRows) {
-		StringBuilder arr[] = new StringBuilder[nRows];
-		int line = 0;
-		boolean isUp = true;
-
-		for (int i = 0; i < s.length(); i++) {
-			if (arr[line] == null) {
-				arr[line] = new StringBuilder("");
-			}
-			arr[line].append(s.charAt(i));
-			// reach top
-			if (line == nRows - 1)
-				isUp = false;
-			// reach bottom
-			else if (line == 0)
-				isUp = true;
-
-			if (isUp && line != nRows - 1)
-				line++;
-			if (!isUp && line != 0)
-				line--;
-		}
-		StringBuilder ret = new StringBuilder("");
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] != null)
-				ret.append(arr[i]);
-		}
-		return ret.toString().trim();
-	}
+        if (nRows <= 1) return s;
+        
+        StringBuilder sb = new StringBuilder();
+        int step = 2*(nRows-1);
+        for (int i = 0; i < nRows; i++) {
+            int j = i;
+            if (i == 0 || i == nRows-1) { //first and last rows
+                while (j < s.length()) {
+                    sb.append(s.charAt(j));
+                    j += step;
+                }
+            } else { //middle rows
+                int step1 = 2*(nRows-1 - i);
+                int step2 = 2*i;
+                boolean flag = true;
+                while (j < s.length()) {
+                    sb.append(s.charAt(j));
+                    j += flag ? step1 : step2;
+                    flag = !flag;
+                }
+            }
+        }
+        
+        return sb.toString();
+    }
 
 	public static String convert2(String s, int nRows) {
 		if (nRows <= 1)
