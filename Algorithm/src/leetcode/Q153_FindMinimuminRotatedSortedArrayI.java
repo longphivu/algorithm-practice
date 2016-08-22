@@ -23,30 +23,33 @@ public class Q153_FindMinimuminRotatedSortedArrayI {
 		System.out.println(nums[findMin(nums)]);
 	}
 
-	private static int findMin(int[] nums) {
-		int hi = nums.length - 1;
-		int lo = 0;
-		int mid;
-
-		while (lo < hi) {
-			if (nums[lo] < nums[hi])
-				return lo;
-			mid = (lo + hi) >>> 1;
-			if (nums[mid] > nums[hi]) {
-				lo = mid + 1;
-			} else if (nums[mid] < nums[hi]) {
-				hi = mid + 1; //mid might be smallest, so set hi = mid + 1, we always return lo
-			} else {
-				if (nums[lo] > nums[hi]) {
-					hi = mid;
-					lo++;
-				}
-				else 
-					lo++;
-			}
-		}
-
-		return lo;
-	}
+	public static int findMin(int[] nums) {
+        return findRotatePoint(nums);
+    }
+    private static int findRotatePoint(int[] nums) {
+        int hi = nums.length - 1;
+        int lo = 0;
+        int mid;
+        
+        while (lo < hi) {
+            if (nums[lo] < nums[hi]) return lo;
+            mid = (lo + hi) >>> 1;
+            if (nums[mid] > nums[hi]) {
+                lo = mid + 1;
+            } else if (nums[mid] < nums[hi]) {
+                hi = mid;
+            } else {
+                if (nums[lo] > nums[hi]) {
+                    hi = mid;
+                    lo++;
+                }
+                else {
+                    hi--;
+                }
+            }
+        }
+        
+        return lo;
+    }
 
 }
