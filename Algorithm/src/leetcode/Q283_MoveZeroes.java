@@ -24,8 +24,8 @@ public class Q283_MoveZeroes {
 	public void moveZeroes(int[] nums) {
         if (nums == null || nums.length == 0) return;
         
-        int i = 0;
-        int j = 0;
+        int i = 0;//moving pointer
+        int j = 0;//zeros pointer
         while (i < nums.length) {
             if (nums[i] != 0) {
                 if (nums[j] == 0) { //only swap to 0 element
