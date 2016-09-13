@@ -28,9 +28,6 @@ import java.util.List;
 public class Q022_GeneateParentheses {
 	public List<String> generateParenthesis(int n) {
         List<String> solutions = new ArrayList<String>();
-        
-        if (n == 0) return solutions;
-        
         StringBuilder sb = new StringBuilder();
         generate(solutions, sb, n, n);
         return solutions;
