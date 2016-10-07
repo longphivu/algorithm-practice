@@ -1,4 +1,4 @@
-package common;
+package other;
 
 /**
  * Author:		Long Vu, longvu.cs@outlook.com

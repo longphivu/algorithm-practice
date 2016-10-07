@@ -6,7 +6,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-import common.Anagram;
+import other.Anagram;
 
 public class SherlockAndAnagram {
 
