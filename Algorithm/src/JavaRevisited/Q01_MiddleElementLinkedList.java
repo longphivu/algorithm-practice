@@ -1,6 +1,6 @@
 package JavaRevisited;
 
-import universal.Node;
+import common.Node;
 
 public class Q01_MiddleElementLinkedList {
 	public static Node getMiddle(Node head) {

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import universal.Interval;
+import common.Interval;
 
 /**
  * Author:		Long Vu, longvu.cs@outlook.com

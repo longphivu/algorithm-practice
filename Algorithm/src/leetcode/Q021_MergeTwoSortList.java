@@ -1,6 +1,6 @@
 package leetcode;
 
-import universal.ListNode;
+import common.ListNode;
 
 public class Q021_MergeTwoSortList {
 	/**

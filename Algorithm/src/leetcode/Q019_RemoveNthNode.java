@@ -1,6 +1,6 @@
 package leetcode;
 
-import universal.Node;
+import common.Node;
 
 /**
  * Author:		Long Vu, longvu.cs@outlook.com

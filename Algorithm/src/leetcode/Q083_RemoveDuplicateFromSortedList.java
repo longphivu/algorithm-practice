@@ -1,6 +1,6 @@
 package leetcode;
 
-import universal.ListNode;
+import common.ListNode;
 
 /**
  * Author:		Long Vu, longvu.cs@outlook.com

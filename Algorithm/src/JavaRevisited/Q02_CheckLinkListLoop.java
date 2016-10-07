@@ -1,6 +1,6 @@
 package JavaRevisited;
 
-import universal.Node;
+import common.Node;
 
 public class Q02_CheckLinkListLoop {
 	public static boolean hasLoop(Node head) {

@@ -1,4 +1,4 @@
-package universal;
+package common;
 
 /**
  * Author:		Long Vu, longvu.cs@outlook.com
