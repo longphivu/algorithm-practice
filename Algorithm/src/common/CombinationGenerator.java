@@ -32,7 +32,7 @@ package common;
 				3 4 5 - last combination since all values are set to the maximum possible values of n - m + i.
 
  * Complexity:
- * Notes:	
+ * Notes:		Credit goes to http://planetcalc.com/3757/
  *				
  * Follow up:	
  */
