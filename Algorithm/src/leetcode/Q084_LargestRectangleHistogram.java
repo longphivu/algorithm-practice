@@ -13,7 +13,7 @@ import java.util.Stack;
  *
  * Solution:	use stack to store the height, calculate max each time we reach lower height
  * Complexity:	O(n)
- * Notes:		can increase performance by using integer array stack 
+ * Notes:		can increase performance by using integer array stack, credit goes to programcreek.com 
  * Follow up:	(H) Maximal Rectangle  
  */
 public class Q084_LargestRectangleHistogram {

@@ -6,15 +6,22 @@ import java.util.List;
  * Author:		Long Vu, longvu.cs@outlook.com
  * Date:		Aug 8, 2016
  * Problem:		Q120_Triangle.java
- * Source:		
+ * Source:		https://leetcode.com/problems/triangle/
  *
- * Description:	
- *
- * Solution:	
- * Complexity:
+ * Description:	Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+				For example, given the following triangle
+				[
+				     [2],
+				    [3,4],
+				   [6,5,7],
+				  [4,1,8,3]
+				]
+				The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11). 
+ * Solution:	DP, calculate the minimum starting from the row next to bottom
+ * Complexity:	O(n*m)
  * Notes:
  *				
- * Follow up:	
+ * Follow up:	(M) Unique Paths   (M) Wiggle Subsequence   (M) Combination Sum IV  
  */
 public class Q120_Triangle {
 	public int minimumTotal(List<List<Integer>> triangle) {
