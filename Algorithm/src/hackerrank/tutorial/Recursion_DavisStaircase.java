@@ -14,7 +14,7 @@ import java.util.Scanner;
  * 				Eg. f(4) = f(3) + f(2) + f(1)
  * 				
  * Complexity:	O(n)
- * Notes:		0 staircase can be either 0 or 1 way to finish it, in this solution I use 1
+ * Notes:		0 staircase can have either 0 or 1 way to finish it, in this solution I use 1
  *				
  * Follow up:	
  */
