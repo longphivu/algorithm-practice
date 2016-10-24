@@ -34,52 +34,52 @@ public class Trie_Contacts {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
-		Node root = new Node();
+		TrieNode root = new TrieNode();
 		for (int a0 = 0; a0 < n; a0++) {
 			String op = in.next();
 			String contact = in.next();
 			if ("add".equals(op)) {
-				Node.addToTrie(contact, root);
+				TrieNode.addToTrie(contact, root);
 			} else if ("find".equals(op)) {
-				int cnt = Node.countTrie(contact, root);
+				int cnt = TrieNode.countTrie(contact, root);
 				System.out.println(cnt);
 			}
 		}
 	}
 }
 
-class Node {
-	Node[] childs;
+class TrieNode {
+	TrieNode[] childs;
 	int cnt;
 
-	Node() {
-		childs = new Node[26];
+	TrieNode() {
+		childs = new TrieNode[26];
 		cnt = 0;
 	}
 
-	public static void addToTrie(String word, Node root) {
+	public static void addToTrie(String word, TrieNode root) {
 		root.cnt++;
 		addToTrie(word, 0, root);
 	}
 
-	private static void addToTrie(String word, int idx, Node node) {
+	private static void addToTrie(String word, int idx, TrieNode node) {
 		if (idx == word.length())
 			return;
 
 		char c = word.charAt(idx);
 		int pos = c - 'a';
 		if (node.childs[pos] == null) {
-			node.childs[pos] = new Node();
+			node.childs[pos] = new TrieNode();
 		}
 		node.childs[pos].cnt++;
 		addToTrie(word, idx + 1, node.childs[pos]);
 	}
 
-	public static int countTrie(String word, Node root) {
+	public static int countTrie(String word, TrieNode root) {
 		return findTrie(word, 0, root);
 	}
 
-	private static int findTrie(String word, int idx, Node node) {
+	private static int findTrie(String word, int idx, TrieNode node) {
 		if (node == null)
 			return 0;
 
