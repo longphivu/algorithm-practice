@@ -24,12 +24,14 @@ public class Anagram {
 	public static void main(String[] arg){
 		System.out.println(isAnagram("abcccc","accbccd"));
 		
-		String a = "a";
-		String b = "b";
+		int i = 0;
+        for (char j = 0; j < 26; j++) {
+        		char af = (char) (j + 'a');
+            	System.out.println(af);
+        }
 		
-		swap(a, b);
-		System.out.println(a);
-		System.out.println(b);
+		System.out.println(i+'a');
+		System.out.println(i++);
 		
 		int n = 4;
 		while(n-->0){
