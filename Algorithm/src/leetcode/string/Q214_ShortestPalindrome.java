@@ -20,7 +20,6 @@ package leetcode.string;
 public class Q214_ShortestPalindrome {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println(shortestPalindrome("abcd"));
 	}
 
@@ -52,6 +51,13 @@ public class Q214_ShortestPalindrome {
 		return sb.append(s).toString();
 	}
 	
+	/**
+	 * Return the length of the palindrome
+	 * @param s
+	 * @param mid1
+	 * @param mid2
+	 * @return
+	 */
 	public static int getLeftMostPalindrome(String s, int mid1, int mid2) {
 		if (mid1 < 0 || mid1 >= s.length()) return 0;
 		if (mid2 < 0 || mid2 >= s.length()) return 0;
