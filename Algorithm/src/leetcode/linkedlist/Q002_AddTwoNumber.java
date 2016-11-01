@@ -17,7 +17,8 @@ import common.ListNode;
  * Complexity:	O(n)
  * Notes:		take caution of the cases: when one list longer than the other; when one list is null; when the last sum may have extra carry at the end 
  * 
- * Follow up:	(M) Multiply Strings,   (E) Add Binary,   (E) Sum of Two Integers  
+ * Follow up:	(M) Multiply Strings,   (E) Add Binary,   (E) Sum of Two Integers
+ * 				What if Number is stored in correct order  
  */
 public class Q002_AddTwoNumber {
 public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -25,7 +26,7 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode cur = head;
         
         int carry = 0;
-        while(l1 != null || l2!= null || carry == 1){
+        while(l1 != null || l2 != null || carry == 1){
             int val1 = l1 == null ? 0 : l1.val;
             int val2 = l2 == null ? 0 : l2.val;
             int sum = val1 + val2 + carry;
