@@ -1,6 +1,6 @@
 package ctci;
 
-public class Q1_4ReplaceSpaces {
+public class Q1_4_ReplaceSpaces {
 	public static String replaceSpaces(String s) {
 		
 		char[] str = s.toCharArray();
