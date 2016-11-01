@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.dp;
 
 /**
  * Author:		Long Vu, longvu.cs@outlook.com
