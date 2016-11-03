@@ -24,7 +24,7 @@ package leetcode.array;
  *				If k == 0, the kth element is the first element of A or B. 
  *				For normal cases(all other cases), we need to move the pointer at the pace of half of an array length to get log(n) time. 
  * Complexity:	O(logn)
- * Notes:
+ * Notes:	
  *					
  * Follow up:	(M) Construct Binary Tree from Preorder and Inorder Traversal  (E) Intersection of Two Arrays II  (H) Russian Doll Envelopes
  */
