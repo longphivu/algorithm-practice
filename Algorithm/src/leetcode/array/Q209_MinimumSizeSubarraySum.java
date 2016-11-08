@@ -11,7 +11,7 @@ package leetcode.array;
 				For example, given the array [2,3,1,2,4,3] and s = 7,
 				 the subarray [4,3] has the minimal length under the problem constraint. 
  *
- * Solution:	2 pointers to mark the left and right boundaries of the sliding window
+ * Solution:	2 pointers to mark the left and right boundaries of the sliding window, move it to the left
  * Complexity:	O(n)
  * Notes:		If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).
  *				

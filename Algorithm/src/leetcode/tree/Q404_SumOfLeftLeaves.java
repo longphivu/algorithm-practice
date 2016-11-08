@@ -9,7 +9,7 @@ import common.TreeNode;
  *
  * Description:	Find the sum of all left leaves in a given binary tree.
  *
- * Solution:	DFS recursion, determin if a node has a left leaf
+ * Solution:	DFS recursion, determine if a node has a left leaf
  * Complexity:	O(n)
  * Notes:
  *				
