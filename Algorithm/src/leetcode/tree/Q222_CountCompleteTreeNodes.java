@@ -3,6 +3,20 @@ package leetcode.tree;
 import common.TreeNode;
 import common.TreeUtility;
 
+/**
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Nov 8, 2016
+ * Problem:		Q222_CountCompleteTreeNodes.java
+ * Source:		
+ *
+ * Description:	
+ *
+ * Solution:	
+ * Complexity:
+ * Notes:
+ *				
+ * Follow up:	
+ */
 public class Q222_CountCompleteTreeNodes {
 
 	private static int rightMostDepth(TreeNode root) {  //the depth from root to the right most leave
