@@ -20,6 +20,25 @@ import common.ListNode;
  * Follow up:	
  */
 public class Q024_SwapNodeInPair {
+	
+	public ListNode swapPairs2(ListNode head) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        head = dummy;
+        while (head.next != null && head.next.next != null) {
+            ListNode second = head.next.next;
+            ListNode first = head.next;
+            
+            ListNode temp = second.next;
+            head.next = second;
+            head.next.next = first;
+            first.next = temp;
+            
+            head = first;
+        }
+        return dummy.next;
+    }
+	
 	public ListNode swapPairs(ListNode head) {
         ListNode currNode = head;
         ListNode prevNode = null;
