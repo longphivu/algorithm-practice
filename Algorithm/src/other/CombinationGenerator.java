@@ -42,53 +42,40 @@ public class CombinationGenerator {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String[] a = {"A","B","C","D","S"};
-		generate(a, 5, 3);
+		String[] a = {"A","B","C","D"};
+		generate(a, 2);
 	}
 	
-	static void generate(Object[] a, int n, int m){
+	static void generate(Object[] a, int m){
+		int n = a.length;
 		
-		int[] pos = new int[n];
-		for(int i = 0; i < n; i++){
+		int[] pos = new int[m];
+		
+		for(int i = 0; i < m; i++){
 			pos[i] = i;
 		}
-		int[] b = new int[m];
-		b[0] = pos[0];
-		fill(b, 1, m-1, 0);
-		print(b);
 		
-		int i = m-1;
-		while (i >= 0){
-			while (b[i] < pos[n - m + i]){
-				b[i]++;
-				print(b);
-			}
+		print(a, pos);
 		
-			//reset
-			fill(b, i+1, i+1, 0);
-			i--;
-			
-			if(i >= 0 && b[i] < pos[n - m + i]){
-				b[i] = b[i]+1;
-				fill(b, i+1, m-1, 1);
-				i = m-1;
+		for (int i = m-1; i >= 0; i--) {
+			if (pos[i] < n-m+i) {
+				pos[i]++;
+				int inc = 1;
+				for (int j = i+1; j < m; j++) {
+					pos[j] = pos[i] + inc;
+					inc++;
+				}
+				i = m;
+				print(a, pos);
 			}
 		}
-		print(b);
 		
 	}
 	
-	static void fill(int[] b, int from, int to, int d){
-		if( d < 0 || d > 1)
-			return;
-		for(int i = from; i < b.length && i <= to; i++){
-			b[i] = b[i-1]+1;
-		}
-	}
 
-	static void print(int[] a){
+	static void print(Object[] o, int[] a){
 		for(int i : a){
-			System.out.print(i+" ");
+			System.out.print(o[i]+" ");
 		}
 		System.out.println();
 	}
