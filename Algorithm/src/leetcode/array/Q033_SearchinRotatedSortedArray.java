@@ -59,4 +59,41 @@ public class Q033_SearchinRotatedSortedArray {
         }
         return -1;
     }
+    
+	public static int searchRotate(int[] nums, int x) {
+		int hi = nums.length - 1;
+		int lo = 0;
+		int mid = (lo + hi) >> 1;
+		while (lo <= hi) {
+			mid = (lo + hi) >> 1;
+			int y = nums[mid];
+			if (nums[mid] == x) return mid;
+			if (nums[lo] < nums[mid]) {// [lo, mid] is sorted
+				if (nums[lo] <= x && x < nums[mid])
+					hi = mid-1;
+				else
+					lo = mid+1;
+			} else {// [lo, mid] is not sorted => [mid, hi] is sorted
+				if (nums[mid] < x && x <= nums[hi])
+					lo = mid+1;
+				else
+					hi = mid-1;
+			}
+		}
+		return -1;
+	}
+	
+	public static void main(String[] aar) {
+		int[] arr = {4,4,3,2,2,2,2};
+		System.out.println(searchRotate(arr, 2));
+		System.out.println(searchRotate(arr, 1));
+		System.out.println(searchRotate(arr, 3));
+		System.out.println(searchRotate(arr, 4));
+		System.out.println(searchRotate(arr, 5));
+		System.out.println(searchRotate(arr, 6));
+		System.out.println(searchRotate(arr, 7));
+		System.out.println(searchRotate(arr, 8));
+		System.out.println(searchRotate(arr, 9));
+	}
+	
 }

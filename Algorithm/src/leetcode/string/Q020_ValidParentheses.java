@@ -23,7 +23,7 @@ public class Q020_ValidParentheses {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(isValid("{[x]y()}"));
+		System.out.println(isValid("{[x]()}"));
 
 	}
 	public static boolean isValid(String s) {
