@@ -76,7 +76,7 @@ public class Combination {
 	}
 	
 	public static void main(String[] args) {
-		recursive(5, 3);
+		recursive(4, 3);
 		//iterative(5, 3);
 	}
 

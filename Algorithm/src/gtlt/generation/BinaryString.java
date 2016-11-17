@@ -41,14 +41,7 @@ public class BinaryString {
 		char [] str = new char[n];
 		
 		Arrays.fill(str, '0');
-		
-		//System.out.println(str);
-		
-//		for (int i = 0; i < n; i++) {
-//			str[i] = flip(str[i]);
-//			recursiveHelper(str, i+1);
-//			str[i] = flip(str[i]);
-//		}
+
 		tryBinary(str, 0);
 	}
 	

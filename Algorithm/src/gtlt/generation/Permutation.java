@@ -1,5 +1,8 @@
 package gtlt.generation;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Permutation {
 
 	
@@ -37,6 +40,33 @@ public class Permutation {
 			}
 		}
 	}
+	
+	/**Generate permutation of n elements choose k elements
+	 * k <= n
+	 * @param n
+	 * @param k
+	 */
+	public static void recursive(int n, int k) {
+		int[] arr = new int[k];
+		Set<Integer> used = new HashSet<>();
+		tryReplace(arr, n, k, 0, used);
+	}
+	
+	private static void tryReplace(int[] arr, int n, int k, int index, Set<Integer> used) {
+		if (index >= k) {
+			printArray(arr);
+			return;
+		}
+		
+		for (int i = 0; i < n; i++) {
+			if (used.contains(i)) continue;
+			used.add(i);
+			arr[index] = i;
+			tryReplace(arr, n, k, index+1, used);
+			used.remove(i);
+		}
+	}
+	
 	
 	/** Generate all permutation from 0 to n-1
 	 * @param n range of number
@@ -93,8 +123,10 @@ public class Permutation {
 			System.out.print(e + " ");
 		}
 		System.out.println();
+		count++;
 	}
 	
+	static int count = 0;
 	public static void printArray(char[] source, int[] index) {
 		for (int e : index) {
 			System.out.print(source[e] + " ");
@@ -104,8 +136,11 @@ public class Permutation {
 	
 	public static void main(String[] args) {
 		//iterative(4);
-		char[] cs = {'a', 'b', 'c', 'd'};
-		generatePermutation(cs);
+		recursive(3, 3);
+		//char[] cs = {'a', 'b', 'c', 'd'};
+		//generatePermutation(cs);
+		
+		System.out.println(count);
 	}
 
 }
