@@ -3,6 +3,30 @@ package gtlt.generation;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Author:		Long Vu, longvu.cs@outlook.com
+ * Date:		Nov 17, 2016
+ * Problem:		Permutation.java
+ * Source:		
+ *
+ * Description:	Generate Permutation of n elements
+ * 				Generate Permutation of n elements select k elements
+ *
+ * Solution:	Iterative:
+ * 					1. Find the smallest subset (a[i] < a[i+1] for all i)
+ * 					2. Scan from right to left, find the first reverse pair, i.e. a[i] < a[i+1]
+ * 					3. Swap the smallest from [i+1, n) to i that larger than [i]
+ * 					4. Revert [i+1, n) so [i+1, n) become next smallest
+ * 					5. Repeat
+ * 				Recursive: (backtracking)
+ * 					1. Create array of n elements
+ * 					2. Recursive try all possible element at each index
+ * 					3. Use additional storage to remember elements had been used to avoid using it again
+ * Complexity:	O(n!)
+ * Notes:
+ *				
+ * Follow up:	
+ */
 public class Permutation {
 
 	

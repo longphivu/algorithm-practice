@@ -61,4 +61,9 @@ public class Q052_NQueenII {
         }
         return true;
     }
+    
+    public static void main(String[] args) {
+		Q052_NQueenII nq = new Q052_NQueenII();
+		System.out.println(nq.totalNQueens(20));
+	}
 }
