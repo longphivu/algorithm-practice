@@ -14,7 +14,7 @@ package gtlt.enhancebacktracking;
  * Solution:	If string X = X1X2X3...Xn has no equal consecutive substrings then every 4 characters must have at least one character 'C'
  * 				Hence, a string with k character must have at least k/4 'C' character.
  * 				We use this one to check if our current solution is good enough to continue solving
- * 				If Ti + (N - i) <= best_min then continue solving
+ * 				If Ti + (N - i)/4 <= best_min then continue solving
  * 				where Ti	  : current 'C' count
  * 					  N		  : length of desire string
  * 					  i		  : current solution length
